@@ -1,0 +1,68 @@
+<?php
+// module/bank/view/bank/bank/index.phtml:
+
+$title = 'Registro de bancos';
+$this->headTitle($title);
+
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<br>
+<div class="row">
+  <div class="col-" >
+    <div class="card"  style="background:#e0ebeb;">
+      <div class="card-body">
+      <form  id="frmIngreso">
+        <input id="id"  type="hidden" >
+        <label style="width: 35%; ">Nombre:</label>
+        <input class="form-control-inline" id="nombre" placeholder="Nombre del Banco" type="text">
+        <br>
+        
+        <label style="width: 35%;"> Codigo:</label>
+        <input class="form-control-inline" id="codigo" placeholder="Codigo del Banco" type="text">
+        <br>
+        <label style="width: 35%; ">Siglas:</label>
+        <input class="form-control-inline" id="siglas" placeholder="Siglas del Banco" type="text">
+        <br>
+        <label style="width: 35%; ">Codigo Sup Cia.:</label>
+        <input class="form-control-inline" id="codsc" placeholder="Codigo Sup Cia. del Banco" type="text">
+        <br>
+        <label style="width: 35%; ">Estado:</label>
+        <select lass="form-control-inline" name="" id="estado">
+          <option value="ACTIVO">ACTIVO</option>
+          <option value="INACTIVO">INACTIVO</option>
+        </select>
+        <br>
+        <button  class="btn btn-info" type="submit" id="registrarBanco">Registrar Banco</button>
+   
+    </form> 
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card" style="background:#e0ebeb;">
+      <div class="card-body">
+      <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Siglas</th>
+            <th>Codigo Super. Cia.</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+        <tbody id="tabla">
+
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-left" style="background:black;">
+    
+</div>
+
+
+
+
